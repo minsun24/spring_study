@@ -5,12 +5,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Application {
     public static void main(String[] args) {
-        // 필기. ApplicationContext 는 콩을 만드는 컨테이너 (?)
+        /*  필기. ApplicationContext: 스프링 컨테이너 (Bean을 관리하는 공간)
+                ContextConfiguration 클래스를 기반으로 컨테이너를 생성함
+        */
         // 설정한 meta data(ContextConfiguration.class) 로부터 컨테이너가 만들어지는 것
         ApplicationContext context = new AnnotationConfigApplicationContext(ContextConfiguration.class);
 
         String[] beanNames = context.getBeanDefinitionNames();
-        // 컨테이너에 콩이 있다면 하나씩 꺼내서 보여주라는 것
+        // 컨테이너에 등록된 Bean(콩)의 이름들을 출력
         for (String beanName : beanNames) {
             System.out.println("beanName: " + beanName);
             
@@ -22,9 +24,6 @@ public class Application {
 //        beanName: org.springframework.context.event.internalEventListenerFactory
 //        beanName: contextConfiguration
 //        beanName: getMember
-
-
-
 
 
     }

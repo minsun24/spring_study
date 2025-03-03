@@ -1,4 +1,4 @@
-package com.ohgiraffers.section02.setter;
+package com.ohgiraffers.section01.autowired.subsection02;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

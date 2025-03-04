@@ -6,7 +6,7 @@ import lombok.ToString;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+//@ToString
 public class Beverage extends Product{
     private int capacity;   // 용량(ml)
 

@@ -14,10 +14,15 @@ public class Application {
         ApplicationContext context = new AnnotationConfigApplicationContext(ContextConfiguration.class);
 
         Product carpBread = context.getBean("carpBread", Bread.class);
-        Product milk = context.getBean("milk", Product.class);
-
+        Product milk = context.getBean("milk", Beverage.class);
         System.out.println("carpBread = " + carpBread);
         System.out.println("milk = " + milk);
 
+        Product water = context.getBean("water", Beverage.class);
+        System.out.println("water = " + water);
     }
 }
+
+//  carpBread = Bread{bakedDate=Tue Mar 04 09:13:09 KST 2025} Product(name=붕어빵, price=1000)
+//  milk = Beverage{capacity=750} Product(name=딸기우유, price=1500)
+//  water = Beverage{capacity=2000} Product(name=백두산암반수, price=3000)

@@ -40,6 +40,14 @@ public class ContextConfiguration {
         return new Beverage(milkName, milkPrice, milkCapacity);
     }
 
+    // 필기. 파라미터 안에 @Value 어노테이션 사용해서 대입 하는 방법 
+    @Bean
+    public Product water(@Value("${beverage.water.name}") String waterName,
+                         @Value("${beverage.water.price}") int waterPrice,
+                         @Value("${beverage.water.capacity}") int waterCapacity) {
+        return new Beverage(waterName, waterPrice, waterCapacity);
+
+    }
 
 }
 
